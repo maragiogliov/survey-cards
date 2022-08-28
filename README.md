@@ -1,71 +1,29 @@
+
 # Getting Started with Create React App
+    Assessment: Front-End Developer
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+Scenario:
 
-In the project directory, you can run:
+We are running a legacy PHP application using CakePHP (MVC Framework).
+Our dashboard pages are rendered in separate view files in PHP which is running on a number of web servers behind a load balancer.
 
-### `npm start`
+For authentication, PHP $_SESSION is used, backed by a sessions table in a relational database. Our goal is to migrate from the PHP MVC infrastructure to a serverless backend with REST API endpoints. The new frontend is a ReactJS application (SPA), with pure clientside rendering hosted on AWS cloudflare (CDN).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# Question 1: Technologies
+To optimize initial load time for our ReactJS application, we intend to host it on a CDN. This restricts the choice of ReactJS features / technologies that can be used in a feasibleway.What are differences between a common ReactJS deployment in a serverenvironment vs. a CDN deployment and how does it affect application design (routingfor example)?
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# Question 2: Authentication
+Login to our dashboard is still performed through PHP and the ReactJS REST backend has no access to the PHP sessions. What is a suitable way to share authentication information from PHP to the ReactJS app and what are the technical requirements?
 
-### `npm test`
+# Question 3: Incremental Migration
+The goal is to incrementally migrate from CakePHP to the new ReactJS + REST API infrastructure. This means that portions of our dashboards (whole sections or just single pages) would still
+get rendered on the PHP Web Servers, while others are already implemented in the ReactJS application. Since the ReactJS application is hosted on a CDN, what are possible solutions to have a seamless dashboard experience while migrating portions to ReactJS?
+ 
+# Question 4: Protecting Sensitive Data
+Our dashboard has different access roles and limited / exclusive views to some of them. One concern is that with a purely client rendered dashboard, customers could see certain fields / information / settings that are reserved for certain admin roles (like the layout of admin-only forms).
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+What are options to hide or protect this kind of data with...
+a.) ... purely client-side rendering and hosting on a detached CDN?
+b.) ... a mix of client-side and server-side rendering with sacrifices to performance?
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# survey-cards
