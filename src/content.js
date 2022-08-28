@@ -21,7 +21,7 @@ const productData = [
     completes: 8,
     minutes: 2,
     qualification: 4,
-    value: 3000
+    value: 30000
     } ,
     { 
     id: 2,
@@ -30,7 +30,7 @@ const productData = [
     completes: 8,
     minutes: 2,
     qualification: 3,
-    value: 3000
+    value: 30000
     } ,
     { 
     id: 3,
@@ -39,7 +39,7 @@ const productData = [
     completes: 8,
     minutes: 2,
     qualification: 4,
-    value: 3000
+    value: 30000
     } ,
 
     { 
@@ -49,7 +49,7 @@ const productData = [
     completes: 8,
     minutes: 2,
     qualification: 3,
-    value: 3000
+    value: 30000
     } ,
     { 
     id: 5,
@@ -58,7 +58,7 @@ const productData = [
     completes: 8,
     minutes: 2,
     qualification: 4,
-    value: 3000
+    value: 30000
     } ,
     
 
@@ -69,7 +69,7 @@ const productData = [
     completes: 8,
     minutes: 2,
     qualification: 4,
-    value: 3000
+    value: 30000
     } ,
 
     { 
@@ -79,7 +79,7 @@ const productData = [
     completes: 8,
     minutes: 2,
     qualification: 4,
-    value: 3000
+    value: 30000
     } ,
 
     { 
@@ -89,7 +89,7 @@ const productData = [
     completes: 8,
     minutes: 2,
     qualification: 4,
-    value: 3000
+    value: 30000
     } 
     
   ];
