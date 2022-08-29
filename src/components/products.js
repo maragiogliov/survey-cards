@@ -1,6 +1,6 @@
-import { BeakerIcon } from '@heroicons/react/24/solid'
+// import { BeakerIcon } from '@heroicons/react/24/solid'
 
-
+// finally
 // tailwing icons here
 
 export function Products(props) {
